@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0"
+            style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="lk.nsbm.dep.booking.controller.CondFormController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="630.0" layoutX="-1.0" layoutY="-1.0" stroke="#ecf0f1"
+                   strokeType="INSIDE" width="29.0">
+            <fill>
+                <LinearGradient endX="0.8952380952380953" endY="0.7857142857142857">
+                    <stops>
+                        <Stop color="#13d02c"/>
+                        <Stop color="#ffffff00" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <ImageView fx:id="img_back" fitHeight="80.0" fitWidth="98.0" layoutX="309.0" layoutY="14.0"
+                   onMouseClicked="#gohome" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/homepage.png"/>
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="262.0" layoutY="101.0" prefHeight="30.0" prefWidth="175.0"
+               text="Conductor Details">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="298.0" layoutY="140.0" text="Conductor  ID :"/>
+        <Label fx:id="lbl_id" layoutX="389.0" layoutY="138.0" prefHeight="21.0" prefWidth="80.0" text="00">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="txt_name" layoutX="169.0" layoutY="169.0" prefHeight="25.0" prefWidth="363.0"
+                      promptText="Conductor  Name"/>
+        <JFXTextField fx:id="txt_nic" layoutX="169.0" layoutY="219.0" prefHeight="25.0" prefWidth="363.0"
+                      promptText="Conductor  NIC"/>
+        <JFXTextField fx:id="txt_num" layoutX="168.0" layoutY="274.0" prefHeight="25.0" prefWidth="363.0"
+                      promptText="Conductor  Contact Number"/>
+        <JFXButton fx:id="btn_new" layoutX="186.0" layoutY="327.0" onAction="#btn_new_act" prefHeight="32.0"
+                   prefWidth="88.0" style="-fx-background-color: #f1c40f;" text="+New"/>
+        <JFXButton fx:id="btn_delete" layoutX="437.0" layoutY="327.0" onAction="#btn_delete_act" prefHeight="32.0"
+                   prefWidth="88.0" style="-fx-background-color: #e74c3c;" text="Delete"/>
+        <JFXButton fx:id="btn_update" layoutX="309.0" layoutY="327.0" onAction="#btn_update_act" prefHeight="32.0"
+                   prefWidth="88.0" style="-fx-background-color: #2ecc71;" text="Save"/>
+        <TableView fx:id="con_tbl" layoutX="88.0" layoutY="376.0" prefHeight="200.0" prefWidth="531.0">
+            <columns>
+                <TableColumn prefWidth="78.0" style="-fx-background-color: #bdc3c7;" text="Con ID"/>
+                <TableColumn prefWidth="111.0" style="-fx-background-color: #bdc3c7;" text="Con Name"/>
+                <TableColumn prefWidth="229.0" style="-fx-background-color: #bdc3c7;" text="Con NIC"/>
+                <TableColumn prefWidth="112.0" style="-fx-background-color: #bdc3c7;" text="Con number"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

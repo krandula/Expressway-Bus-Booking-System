@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0"
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="lk.nsbm.dep.booking.controller.LoginFormController">
+    <children>
+        <ImageView fitHeight="528.0" fitWidth="700.0" layoutY="37.0" opacity="0.54" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../assets/bk.jpg"/>
+            </image>
+        </ImageView>
+        <Line endX="31.0" endY="38.0" layoutX="319.0" layoutY="403.0" startX="31.0" startY="-176.0" stroke="#0a0909"
+              AnchorPane.leftAnchor="349.5" AnchorPane.rightAnchor="349.5"/>
+        <Label layoutX="143.0" layoutY="220.0" text="SignUp" textFill="#2c3e50">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="txt_uname_signup" focusColor="BLACK" labelFloat="true" layoutX="49.0" layoutY="269.0"
+                      prefColumnCount="10" prefHeight="20.0" prefWidth="250.0" promptText="User Name"
+                      unFocusColor="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="15.0"/>
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="txt_pas_sup" focusColor="BLACK" labelFloat="true" layoutX="49.0" layoutY="319.0"
+                          prefHeight="20.0" prefWidth="250.0" promptText="Password" unFocusColor="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="15.0"/>
+            </font>
+        </JFXPasswordField>
+        <JFXPasswordField fx:id="txt_con_pass_sup" focusColor="BLACK" labelFloat="true" layoutX="49.0" layoutY="372.0"
+                          prefHeight="20.0" prefWidth="250.0" promptText="Re Enter Password" unFocusColor="#fffefe">
+            <font>
+                <Font name="System Bold Italic" size="15.0"/>
+            </font>
+        </JFXPasswordField>
+        <JFXButton layoutX="105.0" layoutY="438.0" onAction="#btnRegister" prefHeight="36.0" prefWidth="138.0"
+                   style="-fx-background-color: #e67e22;" text="SignUp">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </JFXButton>
+        <Label layoutX="499.0" layoutY="222.0" text="LogIn" textFill="#2c3e50">
+            <font>
+                <Font name="Arial Bold" size="20.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="txt_uname_login" focusColor="BLACK" labelFloat="true" layoutX="401.0" layoutY="297.0"
+                      prefHeight="20.0" prefWidth="250.0" promptText="User Name" unFocusColor="#fffefe">
+            <font>
+                <Font name="System Bold Italic" size="15.0"/>
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="txt_pas_login" focusColor="BLACK" labelFloat="true" layoutX="402.0" layoutY="364.0"
+                          prefHeight="20.0" prefWidth="250.0" promptText="Password" unFocusColor="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="15.0"/>
+            </font>
+        </JFXPasswordField>
+        <JFXButton layoutX="462.0" layoutY="438.0" onAction="#btnLogin" prefHeight="36.0" prefWidth="138.0"
+                   style="-fx-background-color: #32ff7e;" text="LogIn">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </JFXButton>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0c311" height="38.0" layoutY="562.0" stroke="#f0c31100"
+                   strokeType="INSIDE" width="700.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0c311" height="38.0" stroke="#f0c31100" strokeType="INSIDE"
+                   width="700.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="109.0" layoutY="20.0" stroke="#f0c31100" strokeType="INSIDE"
+                   width="700.0">
+            <fill>
+                <LinearGradient endX="0.5761904761904761" endY="1.0" startX="0.5761904761904761"
+                                startY="0.2714285714285714">
+                    <stops>
+                        <Stop color="#f1c40f"/>
+                        <Stop color="#ffffff00" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="142.0" layoutY="20.0" prefHeight="36.0"
+               prefWidth="452.0" text="දක්ෂිණ ලංකා අධිවේගි මාර්ගය" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="25.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="49.0" fitWidth="151.0" layoutX="317.0" layoutY="60.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../assets/E01.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="lbl_Id" alignment="CENTER" layoutX="215.0" layoutY="179.0" prefHeight="27.0" prefWidth="114.0"
+               textAlignment="CENTER" textFill="#2c3e50">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="117.0" prefHeight="38.0"
+               prefWidth="324.0" text="Bus Booking System" textAlignment="CENTER" textFill="#2c3e50">
+            <font>
+                <Font name="Bell MT Bold" size="25.0"/>
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="120.0" layoutY="480.0" stroke="#f0c31100" strokeType="INSIDE"
+                   width="700.0">
+            <fill>
+                <LinearGradient endX="0.5428571428571429" endY="0.11428571428571428" startX="0.5428571428571429"
+                                startY="0.7238095238095238">
+                    <stops>
+                        <Stop color="#f1c40f"/>
+                        <Stop color="#ffffff00" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+    </children>
+</AnchorPane>

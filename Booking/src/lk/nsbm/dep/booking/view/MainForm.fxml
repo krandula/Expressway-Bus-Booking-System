@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0"
+            style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="lk.nsbm.dep.booking.controller.MainFormController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="92.0" stroke="#ecf0f1" strokeType="INSIDE" width="700.0">
+            <fill>
+                <LinearGradient endX="0.45238095238095233" endY="1.0" startX="0.4523809523809524">
+                    <stops>
+                        <Stop color="#f1c40f"/>
+                        <Stop color="#ecf0f1" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Label layoutX="210.0" layoutY="14.0" text="Southern Expressway">
+            <font>
+                <Font name="System Bold" size="25.0"/>
+            </font>
+        </Label>
+        <ImageView fx:id="tkt" fitHeight="110.0" fitWidth="109.0" layoutX="286.0" layoutY="73.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/ticket.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="drv" fitHeight="150.0" fitWidth="100.0" layoutX="39.0" layoutY="189.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/driver.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="con" fitHeight="150.0" fitWidth="100.0" layoutX="170.0" layoutY="189.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/conductor.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="bus" fitHeight="100.0" fitWidth="100.0" layoutX="297.0" layoutY="189.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/bus.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="pas" fitHeight="150.0" fitWidth="100.0" layoutX="423.0" layoutY="189.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/passenger.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="sch" fitHeight="100.0" fitWidth="100.0" layoutX="562.0" layoutY="189.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/search.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="54.0" fitWidth="73.0" layoutX="476.0" layoutY="16.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../assets/E01.png"/>
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="143.0" layoutY="458.0" stroke="#ecf0f1" strokeType="INSIDE"
+                   width="700.0">
+            <fill>
+                <LinearGradient endX="0.6619047619047619" endY="1.0" startX="0.6619047619047619">
+                    <stops>
+                        <Stop color="#ebeff000"/>
+                        <Stop color="#f1c40f" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <ImageView fitHeight="92.0" fitWidth="100.0" layoutX="228.0" layoutY="327.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../assets/database.png"/>
+            </image>
+        </ImageView>
+        <JFXButton layoutX="358.0" layoutY="338.0" onAction="#btn_bcup" prefHeight="27.0" prefWidth="109.0"
+                   style="-fx-background-color: #2ecc71;" text="Backup" textAlignment="CENTER"/>
+        <JFXButton layoutX="358.0" layoutY="381.0" onAction="#btn_rest" prefHeight="27.0" prefWidth="109.0"
+                   style="-fx-background-color: #e74c3c;" text="Restore"/>
+        <Separator layoutX="62.0" layoutY="309.0" prefHeight="0.0" prefWidth="600.0"/>
+        <Label id="txt_wel" fx:id="txt_wel" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="443.0"
+               prefHeight="30.0" prefWidth="393.0" text="Welcome" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <Label fx:id="txt_con" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="473.0"
+               prefHeight="21.0" prefWidth="647.0" text="Please select one of above main operations to proceed"
+               textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="128.0" layoutY="438.0" prefHeight="3.0" prefWidth="468.0"/>
+        <JFXButton alignment="CENTER" layoutX="312.0" layoutY="512.0" onMouseClicked="#logOut" prefHeight="36.0"
+                   prefWidth="92.0"
+                   style="-fx-background-color: #2ecc71; -fx-background-radius: 7px; -fx-label-padding: 2px;"
+                   text="Log Out">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>

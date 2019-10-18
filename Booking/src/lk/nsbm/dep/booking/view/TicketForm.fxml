@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0"
+            style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="lk.nsbm.dep.booking.controller.TicketFormController">
+    <children>
+        <Label layoutX="295.0" layoutY="70.0" text="Book A Seat" underline="true">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <ImageView fx:id="img_bk" fitHeight="56.0" fitWidth="73.0" layoutX="322.0" layoutY="14.0"
+                   onMouseClicked="#img_bk" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/homepage.png"/>
+            </image>
+        </ImageView>
+        <JFXTextField fx:id="txt_pass_name" layoutX="98.0" layoutY="182.0" prefHeight="25.0" prefWidth="242.0"
+                      promptText="Passenger Name"/>
+        <JFXTextField fx:id="txt_bus_rot" layoutX="388.0" layoutY="182.0" prefHeight="25.0" prefWidth="271.0"
+                      promptText="Bus ID" text="Route ID"/>
+        <JFXTextField fx:id="txt_bs_con_Id" layoutX="389.0" layoutY="252.0" prefHeight="25.0" prefWidth="271.0"
+                      promptText="Conductor Name"/>
+        <Label layoutX="293.0" layoutY="110.0" text="Ticket ID:"/>
+        <Label fx:id="lbl_tk_id" layoutX="358.0" layoutY="106.0" prefHeight="25.0" prefWidth="49.0" text="000"
+               textFill="#d01a1a">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="btn_new" layoutX="139.0" layoutY="336.0" onAction="#btn_new_Act" prefHeight="30.0"
+                   prefWidth="136.0" style="-fx-background-color: #f1c40f;" text="+ New"/>
+        <JFXButton fx:id="btn_book" layoutX="282.0" layoutY="336.0" onAction="#btn_del_Act" prefHeight="30.0"
+                   prefWidth="136.0" style="-fx-background-color: #16a085;" text="Book"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="630.0" layoutX="-1.0" layoutY="-1.0" stroke="#ecf0f1"
+                   strokeType="INSIDE" width="31.0">
+            <fill>
+                <LinearGradient endX="0.7952380952380953" endY="0.7285714285714286">
+                    <stops>
+                        <Stop color="#ff541f"/>
+                        <Stop color="#ffffff00" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <JFXComboBox fx:id="cmb_pass_Id" layoutX="96.0" layoutY="148.0" promptText="Passenger ID"/>
+        <JFXComboBox fx:id="cmb_bus_id" layoutX="389.0" layoutY="148.0" prefHeight="25.0" prefWidth="271.0"
+                     promptText="Bus ID"/>
+        <JFXTextField fx:id="txt_bus_drv_id" layoutX="388.0" layoutY="217.0" prefHeight="25.0" prefWidth="271.0"
+                      promptText="Driver  ID"/>
+        <JFXComboBox fx:id="cmb_time" layoutX="96.0" layoutY="252.0" prefHeight="25.0" prefWidth="242.0"
+                     promptText="TIme"/>
+        <JFXDatePicker fx:id="txt_date" layoutX="95.0" layoutY="285.0" prefHeight="30.0" prefWidth="271.0"
+                       promptText="Date"/>
+        <Label layoutX="410.0" layoutY="288.0" prefHeight="25.0" prefWidth="82.0" text="Price   :" textFill="#d31f1f">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label fx:id="txt_tot" alignment="CENTER" layoutX="500.0" layoutY="288.0" prefHeight="25.0" prefWidth="98.0"
+               text="00" textFill="#d31f1f">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="pass_nic" layoutX="98.0" layoutY="217.0" prefHeight="25.0" prefWidth="242.0"
+                      promptText="Passenger NIC"/>
+        <TableView fx:id="ticket_tbl" layoutX="44.0" layoutY="377.0" prefHeight="175.0" prefWidth="628.0">
+            <columns>
+                <TableColumn prefWidth="83.0" style="-fx-background-color: #bdc3c7;" text="TicketID"/>
+                <TableColumn prefWidth="83.0" style="-fx-background-color: #bdc3c7;" text="Pass ID"/>
+                <TableColumn prefWidth="90.0" style="-fx-background-color: #bdc3c7;" text="Bus ID"/>
+                <TableColumn prefWidth="98.0" style="-fx-background-color: #bdc3c7;" text="Date "/>
+                <TableColumn prefWidth="100.0" style="-fx-background-color: #bdc3c7;" text="Trip No"/>
+                <TableColumn prefWidth="93.0" style="-fx-background-color: #bdc3c7;" text="Seat No"/>
+                <TableColumn style="-fx-background-color: #bdc3c7;" text="Price"/>
+            </columns>
+        </TableView>
+        <Label fx:id="lbl_Date" layoutX="492.0" layoutY="27.0" prefHeight="30.0" prefWidth="173.0" textFill="#1f579a">
+            <font>
+                <Font name="System Bold Italic" size="16.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="btn_dlt" layoutX="424.0" layoutY="336.0" onMouseClicked="#btn_dlt" prefHeight="30.0"
+                   prefWidth="136.0" style="-fx-background-color: #e74c3c;" text="Delete"/>
+    </children>
+</AnchorPane>

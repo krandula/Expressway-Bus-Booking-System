@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="630.0" prefWidth="700.0"
+            style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="lk.nsbm.dep.booking.controller.MainFormController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="67.0" stroke="BLACK" strokeType="INSIDE" width="700.0">
+            <fill>
+                <LinearGradient endX="0.6619047619047619" endY="0.4857142857142857">
+                    <stops>
+                        <Stop color="#f1c40f"/>
+                        <Stop color="WHITE" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Label layoutX="210.0" layoutY="14.0" text="Southern Expressway">
+            <font>
+                <Font name="System Bold" size="25.0"/>
+            </font>
+        </Label>
+        <ImageView fx:id="tkt" fitHeight="110.0" fitWidth="109.0" layoutX="286.0" layoutY="90.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/ticket.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="drv" fitHeight="150.0" fitWidth="100.0" layoutX="42.0" layoutY="226.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/driver.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="con" fitHeight="150.0" fitWidth="100.0" layoutX="173.0" layoutY="226.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/conductor.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="bus" fitHeight="100.0" fitWidth="100.0" layoutX="300.0" layoutY="226.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/bus.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="pas" fitHeight="150.0" fitWidth="100.0" layoutX="426.0" layoutY="226.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/passenger.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="sch" fitHeight="100.0" fitWidth="100.0" layoutX="565.0" layoutY="226.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/search.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="54.0" fitWidth="73.0" layoutX="476.0" layoutY="16.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../assets/E01.png"/>
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="110.0" layoutY="523.0" stroke="BLACK" strokeType="INSIDE"
+                   width="700.0">
+            <fill>
+                <LinearGradient endX="0.6619047619047619" endY="1.0" startX="0.6619047619047619">
+                    <stops>
+                        <Stop color="#ecf0f1"/>
+                        <Stop color="#95a5a6" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <ImageView fitHeight="92.0" fitWidth="100.0" layoutX="210.0" layoutY="378.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../assets/database.png"/>
+            </image>
+        </ImageView>
+        <JFXButton layoutX="340.0" layoutY="389.0" onAction="#btn_bcup" prefHeight="27.0" prefWidth="109.0"
+                   style="-fx-background-color: #2ecc71;" text="Backup" textAlignment="CENTER"/>
+        <JFXButton layoutX="340.0" layoutY="432.0" onAction="#btn_rest" prefHeight="27.0" prefWidth="109.0"
+                   style="-fx-background-color: #e74c3c;" text="Restore"/>
+        <Separator layoutX="65.0" layoutY="362.0" prefHeight="0.0" prefWidth="600.0"/>
+        <Label id="txt_wel" fx:id="txt_wel" alignment="CENTER" layoutX="273.0" layoutY="538.0" prefHeight="17.0"
+               prefWidth="134.0" text="Welcome" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <Label fx:id="txt_con" alignment="CENTER" layoutX="159.0" layoutY="578.0"
+               text="Please select one of above main operations to proceed">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="131.0" layoutY="491.0" prefHeight="3.0" prefWidth="468.0"/>
+    </children>
+</AnchorPane>

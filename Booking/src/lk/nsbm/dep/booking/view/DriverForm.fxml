@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0"
+            style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="lk.nsbm.dep.booking.controller.DriverFormController">
+    <children>
+        <Label layoutX="266.0" layoutY="101.0" text="Bus Driver Details" underline="true">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <ImageView fx:id="img_bk" fitHeight="89.0" fitWidth="81.0" layoutX="310.0" layoutY="14.0"
+                   onMouseClicked="#img_back" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/homepage.png"/>
+            </image>
+        </ImageView>
+        <JFXTextField fx:id="txt_name" layoutX="179.0" layoutY="177.0" prefHeight="25.0" prefWidth="348.0"
+                      promptText="Driver Name"/>
+        <JFXTextField fx:id="txt_nic" layoutX="179.0" layoutY="216.0" prefHeight="25.0" prefWidth="348.0"
+                      promptText="Driver NIC"/>
+        <JFXTextField fx:id="txt_no" layoutX="179.0" layoutY="258.0" prefHeight="25.0" prefWidth="348.0"
+                      promptText="Driver Contact Number"/>
+        <Label layoutX="303.0" layoutY="145.0" text="Driver ID:"/>
+        <Label fx:id="lbl_dr_id" layoutX="365.0" layoutY="143.0" text="000">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="btn_new" layoutX="175.0" layoutY="300.0" onAction="#btn_new_Act" prefHeight="37.0"
+                   prefWidth="112.0" style="-fx-background-color: #f1c40f;" text="+ New"/>
+        <JFXButton fx:id="btn_upadte" layoutX="297.0" layoutY="300.0" onAction="#btn_upadte_Act" prefHeight="37.0"
+                   prefWidth="112.0" style="-fx-background-color: #2ecc71;" text="Save"/>
+        <JFXButton fx:id="btn_del" layoutX="419.0" layoutY="300.0" onAction="#btn_del_Act" prefHeight="37.0"
+                   prefWidth="112.0" style="-fx-background-color: #e74c3c;" text="Delete"/>
+        <TableView fx:id="driver_tbl" layoutX="96.0" layoutY="362.0" prefHeight="200.0" prefWidth="539.0">
+            <columns>
+                <TableColumn prefWidth="75.0" style="-fx-background-color: #bdc3c7;" text="Driver ID"/>
+                <TableColumn prefWidth="98.0" style="-fx-background-color: #bdc3c7;" text="Driver Name"/>
+                <TableColumn prefWidth="243.0" style="-fx-background-color: #bdc3c7;" text="Driver Con Number"/>
+                <TableColumn prefWidth="119.0" style="-fx-background-color: #bdc3c7;" text="Driver NIC"/>
+            </columns>
+        </TableView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="630.0" layoutX="-1.0" layoutY="-1.0" stroke="#ebeff000"
+                   strokeType="INSIDE" width="33.0">
+            <fill>
+                <LinearGradient endX="0.7238095238095238" endY="0.7666666666666666">
+                    <stops>
+                        <Stop color="#ff541f"/>
+                        <Stop color="#ffffff00" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+    </children>
+</AnchorPane>

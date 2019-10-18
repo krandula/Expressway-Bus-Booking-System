@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Crypto">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Booking/lib/Crypto.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
